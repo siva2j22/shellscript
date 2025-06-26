@@ -9,4 +9,3 @@ then
 else
     echo  " you are root user"
 if
-
