@@ -8,4 +8,4 @@ then
     echo "EEROR: PLEASE RUN THIS script with root access"
 else
     echo  " you are root user"
-if
+fi
