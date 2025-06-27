@@ -10,4 +10,6 @@ else
     echo  -e " $G you are root user $N"
 fi     #it was used to close the if statement 
 
-echo "i want all the arguments passed :$@'
+echo "i want all the arguments passed :$@"
+
+
