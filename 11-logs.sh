@@ -12,16 +12,16 @@ echo "script name :$0"
 
 R="\e[31m"
 G="\e[32m"
-N="\e[0m"]
+N="\e[0m"
 
 
 VALIDATE(){
     if [ $1 -ne 0 ]
     then 
-        echo " $R ERROR:: $2 is failed $N"
+        echo "ERROR:: $2 is $R failed $N"
         exit 25
     else
-        echo " $G installed software $2 success $N"
+        echo " installed software $2 $G success $N"
     fi
 }
 
