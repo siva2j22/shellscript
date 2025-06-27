@@ -29,10 +29,10 @@ else
 fi     #it was used to close the if statement 
 
 
-yum install mysql -y 
+yum install mysql -y &>> $LOGFILE
 
 VALIDATE $? "installed mysql" 
 
-yum install git -y
+yum install git -y &>> $LOGFILE
 
 VALIDATE $? "INSTALLING GIT"
