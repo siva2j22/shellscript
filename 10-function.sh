@@ -3,12 +3,12 @@
 ID=$(id -u)
 
 VALIDATE(){
-    if [ $? -ne 0 ]
+    if [ $1 -ne 0 ]
     then 
-        echo "ERROR:: installing software is failed"
+        echo "ERROR:: $2 is failed"
         exit 25
     else
-        echo " installed software is success"
+        echo " installed software $2 success"
     fi
 }
 
@@ -23,8 +23,8 @@ fi     #it was used to close the if statement
 
 yum install mysql -y 
 
-VALIDATE
+VALIDATE $? "installed mysql" 
 
 yum install git -y
 
-VALIDATE
+VALIDATE $? "INSTALLING GIT"
