@@ -1,0 +1,30 @@
+#!/bin/bash
+
+ID=$(id -u)
+
+VALIDATE(){
+    if [ $? -ne 0 ]
+    then 
+        echo "ERROR:: installing software is failed"
+        exit 25
+    else
+        echo " installed software is success"
+    fi
+}
+
+if [ $ID -ne 0 ]
+then
+    echo "EEROR: PLEASE RUN THIS script with root access"
+    exit 52 # it will stop here
+else
+    echo  " you are root user"
+fi     #it was used to close the if statement 
+
+
+yum install mysql -y 
+
+VALIDATE
+
+yum install git -y
+
+VALIDATE
