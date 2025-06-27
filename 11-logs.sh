@@ -10,22 +10,27 @@ echo "timestamp is":$TIMESTAMP
 
 echo "script name :$0"
 
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"]
+
+
 VALIDATE(){
     if [ $1 -ne 0 ]
     then 
-        echo "ERROR:: $2 is failed"
+        echo " $R ERROR:: $2 is failed $N"
         exit 25
     else
-        echo " installed software $2 success"
+        echo " $G installed software $2 success $N"
     fi
 }
 
 if [ $ID -ne 0 ]
 then
-    echo "EEROR: PLEASE RUN THIS script with root access"
+    echo " $R EEROR: PLEASE RUN THIS script with root access $N"
     exit 52 # it will stop here
 else
-    echo  " you are root user"
+    echo  " $G you are root user $N"
 fi     #it was used to close the if statement 
 
 
