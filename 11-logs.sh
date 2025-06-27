@@ -2,6 +2,10 @@
 
 ID=$(id -u)
 
+TIMESTAMP=$(date +%F-%H-%M-%S)
+
+echo "timestamp is":$TIMESTAMP
+
 echo "script name :$0"
 
 VALIDATE(){
