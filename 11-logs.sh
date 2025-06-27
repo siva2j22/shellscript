@@ -4,6 +4,8 @@ ID=$(id -u)
 
 TIMESTAMP=$(date +%F-%H-%M-%S)
 
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
+
 echo "timestamp is":$TIMESTAMP
 
 echo "script name :$0"
