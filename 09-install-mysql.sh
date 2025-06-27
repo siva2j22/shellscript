@@ -11,7 +11,7 @@ else
     echo  " you are root user"
 fi     #it was used to close the if statement 
 
-yum installaa mysql -y
+yum install mysql -y
 
 if [ $? -ne 0 ]
 then 
