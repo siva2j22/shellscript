@@ -12,3 +12,12 @@ else
 fi     #it was used to close the if statement 
 
 yum install mysql -y
+
+if [ $? -ne 0 ]
+then 
+    echo "ERROR:: installing mysql is failed"
+    exit 25
+else
+    echo " installed mysql is success"
+fi
+
