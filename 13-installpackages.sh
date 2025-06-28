@@ -37,7 +37,7 @@ fi     #it was used to close the if statement
 for package in $@  # package = git maven .net 
 do
     yum list installed $package  &>>LOGFILE # cheack install package or not
-    if [ $? -ne 0 ]# in if not installed
+    if [ $? -ne 0 ] # in if not installed
     then
         yum install $package -y &>>LOGFILE # install the package
         VALIDATE $? "Installation of $package"  # validate the 
